@@ -11,15 +11,24 @@
 
   
     <link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/flaticon.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/remixicon.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/odometer.min.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/fancybox.css')}}">
     <link rel="stylesheet" href="{{asset('front/css/aos.css')}}">
+    <link rel="stylesheet" href="{{asset('front/css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{asset('front/css/meanmenu.min.css')}}">
+    <link rel="stylesheet" href="{{asset('front/css/remixicon.css')}}">
+    <link rel="stylesheet" href="{{asset('front/css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{asset('front/css/odometer.min.css')}}">
+    <link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('front/css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{asset('front/css/magnific-popup.min.css')}}">
+    <link rel="stylesheet" href="{{asset('front/css/magnific-popup.min.css')}}">
+
     <link rel="stylesheet" href="{{asset('front/css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/dark-theme.css')}}">
-    <link rel="stylesheet" href="{{asset('front/css/responsive.css')}}">
+    <link rel="stylesheet" href="{{asset('front/css/navbar.css')}}">
+    <link rel="stylesheet" href="{{asset('front/css/footer.css')}}">
+    <link rel="stylesheet" href="{{asset('front/css/dark.css')}}">
+    <link rel="stylesheet" href="{{asset('front/css/responsive.cs')}}">
+
+
 
 </head>
 <body>
@@ -28,15 +37,22 @@
 </body>
   <script src="{{asset('front/js/jquery.min.js')}}"></script>
     <script src="{{asset('front/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('front/js/form-validator.min.js')}}"></script>
+    <script src="{{asset('front/js/jquery.meanmenu.js')}}"></script>
     <script src="{{asset('front/js/contact-form-script.js')}}"></script>
     <script src="{{asset('front/js/aos.js')}}"></script>
     <script src="{{asset('front/js/owl.carousel.min.js')}}"></script>
     <script src="{{asset('front/js/odometer.min.js')}}"></script>
     <script src="{{asset('front/js/fancybox.js')}}"></script>
     <script src="{{asset('front/js/jquery.appear.js')}}"></script>
-    <script src="{{asset('front/js/tweenmax.min.js')}}"></script>
+    <script src="{{asset('front/js/jquery.magnific-popup.min.js')}}"></script>
     <script src="{{asset('front/js/main.js')}}"></script>
+        <script src="{{asset('front/js/TweenMax.min.js')}}"></script>
+    <script src="{{asset('front/js/ScrollMagic.min.js')}}"></script>
+    <script src="{{asset('front/js/jquery.ajaxchimp.min.js')}}"></script>
+     <script src="{{asset('front/js/wow.min.js')}}"></script>
+
+
+
 
 <script>
     function checkUserRoleAndRedirect() {
