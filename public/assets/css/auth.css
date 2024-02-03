@@ -11,7 +11,7 @@ body {
     height: 0;
 }
 .btns{
-    background: #00a884;
+    background: #007bff;
     width: 400px;
     max-width: 100%;
     box-sizing: border-box;
@@ -37,7 +37,7 @@ body {
     margin: 8% auto 0;
     position: relative;
     z-index: 1;
-    border-top: 5px solid #00a884;
+    border-top: 5px solid #007bff;
     -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
@@ -125,7 +125,7 @@ body {
     background: #fafafa;
 }
 .form_wrapper input[type="submit"] {
-    background: #00a884;
+    background: #007bff;
     height: 35px;
     line-height: 35px;
     width: 100%;

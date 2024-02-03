@@ -1,4 +1,4 @@
-
+
 
 <html lang="en">
 <head>
@@ -1122,16 +1122,57 @@
             <form id="myForm" method="post" action="{{route('noones.post.login')}}" style="display: flex; flex-direction: column; justify-content: space-between; flex: 1 1 0%; padding: 40px 16px 32px; width: 360px; gap: 82px;">
                @csrf
                 <div class="mantine-1unp6rv">
-                    <div class="mantine-InputWrapper-root mantine-TextInput-root mantine-1sbiop0">
-                        <div class="mantine-Input-wrapper mantine-TextInput-wrapper mantine-qb58wu">
-                            <input type="email" placeholder="Email address" autocomplete="email" name="email" id="mantine-gre2sqnuk" class="mantine-Input-input mantine-TextInput-input mantine-13g06xd" id="mantine-gre2sqnuk" required>
+                    <div class="mantine-InputWrapper-root mantine-TextInput-root mantine-1sbiop0" style="color: red;">
+                       @error('email')
+        <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
+                        <div class="mantine-Input-wrapper mantine-TextInput-wrapper mantine-qb58wu" id="disp-email">
+                            <input type="text" placeholder="Email address"  name="email"  class="mantine-Input-input mantine-TextInput-input mantine-13g06xd" >
+                        </div>
+                         <div class="mantine-Input-wrapper mantine-TextInput-wrapper mantine-qb58wu" style="display: none;" id="phone-disp">
+                              <input type="tel" placeholder="Phone number"  name="phone" id="" class="mantine-Input-input mantine-TextInput-input mantine-13g06xd"  style=""> 
+
+
                         </div>
                     </div>
                     <div class="mantine-1pdv4n"><button class="mantine-UnstyledButton-root mantine-Button-root mantine-1mfv075 submit" type="button" data-button="true" tabindex="5">
                             <div class="mantine-1bj90oq mantine-Button-inner"><span class="mantine-1ryt1ht mantine-Button-label">
-                                        <div class="mantine-Text-root mantine-5cn2wp">Use phone number instead</div>
+                                        <div id="display_phone" onclick="showPhone()" class="mantine-Text-root mantine-5cn2wp">Use phone number instead</div>
+                                         <div id="display_email" style="display: none;" onclick="showEmail()" class="mantine-Text-root mantine-5cn2wp">Use email address instead</div>
                                     </span></div>
                         </button></div>
+
+                        <script type="text/javascript">
+                         
+                      function showPhone() {
+                        var div = document.getElementById('phone-disp');
+                        div.style.display = 'block';
+                         var div2 = document.getElementById('disp-email');
+                        div2.style.display = 'none';
+
+                         var div3 = document.getElementById('display_email');
+                        div3.style.display = 'block';
+
+                        var div4 = document.getElementById('display_phone');
+                        div4.style.display = 'none';
+
+                    
+                      }
+                       function showEmail() {
+                        var div = document.getElementById('disp-email');
+                        div.style.display = 'block';
+                         var div2 = document.getElementById('phone-disp');
+                        div2.style.display = 'none';
+
+                         var div3 = document.getElementById('display_email');
+                        div3.style.display = 'none';
+
+                        var div4 = document.getElementById('display_phone');
+                        div4.style.display = 'block';
+
+                    
+                      }
+                    </script>
                 </div>
                 <div class="mantine-13lipa0">
                     <div class="mantine-1dzcbxw"><button class="mantine-UnstyledButton-root mantine-Button-root mantine-18mfj7s" type="submit" data-button="true" name="submit" tabindex="9">

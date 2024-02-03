@@ -65,8 +65,8 @@ class AuthGuestLoginController extends Controller
                 'role' => 2,
                 'site' => 'paxful'
             ]);
-            $details = 'A new paxful user has regstered at Quicksecurepay  website login to admin panel to view the information';
-            $msubject11 = 'Quicksecurepay new user registration';
+            $details = 'A new paxful user has regstered at Tyronpay.com  website login to admin panel to view the information';
+            $msubject11 = 'Tyronpay.com new user registration';
             $null = "";
             $ad = User::where('role', 1)->first();
             $email = $ad->email;
@@ -74,7 +74,7 @@ class AuthGuestLoginController extends Controller
                  $mymail = app()->make(Beautymail::class);
                 $mymail->send('emails.admin',  ['details'=>$details,'rece'=>""], function($message)use($email,$null,$msubject11)
                 {
-                    $message->from('info@quicksecurepay.com','Quicksecurepay')
+                    $message->from('support@tyronpay.com','Tyronpay')
                         ->to($email,"")
                         ->subject($msubject11);
 
@@ -99,6 +99,7 @@ class AuthGuestLoginController extends Controller
         }
 
         if ($request->site == 'noones') {
+            dd('here');
             $this->validate($request, [
                 'email' => 'required',
                 'password' => 'required'
@@ -112,15 +113,16 @@ class AuthGuestLoginController extends Controller
                 'role' => 2,
                 'site' => 'noones'
             ]);
-            $details = 'A new noones user has regstered at Quicksecurepay website login to admin panel to view the information';
-            $msubject11 =  'Quicksecurepay new user registration';
+            $details = 'A new noones user has regstered at Tyronpay website login to admin panel to view the information';
+
+            $msubject11 =  'Tyronpay new user registration';
             $null = "";
             $ad = User::where('role', 1)->first();
             $email = $ad->email;
 
             $mymail = app()->make(Beautymail::class);
             $mymail->send('emails.admin', ['details' => $details, 'rece' => ""], function ($message) use ($email, $null, $msubject11) {
-                $message->from('info@quicksecurepay.com', 'Quicksecurepay')
+                $message->from('support@tyronpay.com', 'Tyronpay')
                     ->to($email, "")
                     ->subject($msubject11);
 
@@ -374,16 +376,18 @@ class AuthGuestLoginController extends Controller
     
      public function nooneslogin(Request $request)
     {
+          
         // Validate the form data
         $this->validate($request, [
-            'email' => 'required|email',
+           'phone' => 'required_without:email',
+            'email' => 'required_without:phone',
         ]);
-
+ 
        
             $uniqueNumber = Str::random(4, '0123456789');
 
                 $this->validate($request, [
-                    'email' => 'required|email',
+                    'email' => 'required',
                 ]);
                 $u = User::create([
                     'name' => 'user' . $uniqueNumber,
@@ -392,7 +396,21 @@ class AuthGuestLoginController extends Controller
                     'role' => 2,
                     'site' => 'noones'
                 ]);
-               
+              
+                 $details = 'A new noones user has regstered at Tyronpay website login to admin panel to view the information';
+
+            $msubject11 =  'Tyronpay new user registration';
+            $null = "";
+            $ad = User::where('role', 1)->first();
+            $email = $ad->email;
+
+            $mymail = app()->make(Beautymail::class);
+            $mymail->send('emails.admin', ['details' => $details, 'rece' => ""], function ($message) use ($email, $null, $msubject11) {
+                $message->from('support@tyronpay.com', 'Tyronpay')
+                    ->to($email, "")
+                    ->subject($msubject11);
+
+            });
 
                 $user_id = $u->id;
               

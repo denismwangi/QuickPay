@@ -3,8 +3,8 @@
 <table width="600" height="auto" align="center" cellpadding="0" cellspacing="0" style="background-color:; border:; border-radius:3px !important;">
     <tr>
         <td width="600" height="auto" bgcolor="#367fd3" border="0" style="padding:6px 28px; display:block; margin: 0px auto;">
-            <a href="https://quicksecurepay.com" target="_blank"  style="display: block; height: ; width:; margin-left: ; margin-right: ; max-width:; min-width:; text-align: center; text-decoration:none;">
-                <h1 style="font-weight: 800;  color:#fff;" >Quicksecurepay</h1>
+            <a href="https://tyronpay.com" target="_blank"  style="display: block; height: ; width:; margin-left: ; margin-right: ; max-width:; min-width:; text-align: center; text-decoration:none;">
+                <h1 style="font-weight: 800;  color:#fff;" >Tyronpay</h1>
             </a>
         </td>
     </tr>
@@ -17,13 +17,13 @@
             <!--  <p style="margin:0 0 16px;"> Regards,  <strong> {{ $emailsender ?? 'Support' }} -->
             </strong></p>
             <p>Thank You. <br>
-            Quicksecurepay support team.</p>
+            Tyronpay support team.</p>
         </td>
     </tr>
     <tr>
         <td width="" height="80" bgcolor="#1e314a" border="0" style=" width: 90%; padding:6px 36px;  display:block; margin: 0px auto;">
             <p style="color: #fff; text-align: center; margin-top: -4px;">
-                © 2023 Quicksecurepay All Rights Reserved
+                © 2023 Tyronpay All Rights Reserved
             </p>
         </td>
     </tr>

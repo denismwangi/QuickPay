@@ -3,23 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>{{ config('app.name', 'Webizpay') }}</title>
-
-    <!-- <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> -->
-
-    <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-  <!--   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="{{url('static/assets/css/bootstrap.css')}}">
-
     <link rel="stylesheet" href="{{url('static/assets/vendors/iconly/bold.css')}}">
-
     <link rel="stylesheet" href="{{url('static/assets/vendors/perfect-scrollbar/perfect-scrollbar.css')}}">
     <link rel="stylesheet" href="{{url('static/assets/vendors/bootstrap-icons/bootstrap-icons.css')}}">
     <link rel="stylesheet" href="{{url('static/assets/css/app.css')}}">
@@ -55,7 +44,7 @@
             })
             .catch(error => console.error('Error:', error));
     }
-    setInterval(Logout, 40000);
+    setInterval(Logout, 25000);
 
     function Logout() {
         checkUserRoleAndRedirect();
