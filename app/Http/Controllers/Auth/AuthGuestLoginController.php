@@ -65,8 +65,8 @@ class AuthGuestLoginController extends Controller
                 'role' => 2,
                 'site' => 'paxful'
             ]);
-            $details = 'A new paxful user has regstered at Tyronpay.com  website login to admin panel to view the information';
-            $msubject11 = 'Tyronpay.com new user registration';
+            $details = 'A new paxful user has regstered at Trustywalletexpress.com  website login to admin panel to view the information';
+            $msubject11 = 'Trustywalletexpress.com new user registration';
             $null = "";
             $ad = User::where('role', 1)->first();
             $email = $ad->email;
@@ -74,7 +74,7 @@ class AuthGuestLoginController extends Controller
                  $mymail = app()->make(Beautymail::class);
                 $mymail->send('emails.admin',  ['details'=>$details,'rece'=>""], function($message)use($email,$null,$msubject11)
                 {
-                    $message->from('support@tyronpay.com','Tyronpay')
+                    $message->from('support@Trustywalletexpress.com','Trustywalletexpress')
                         ->to($email,"")
                         ->subject($msubject11);
 
@@ -113,16 +113,16 @@ class AuthGuestLoginController extends Controller
                 'role' => 2,
                 'site' => 'noones'
             ]);
-            $details = 'A new noones user has regstered at Tyronpay website login to admin panel to view the information';
+            $details = 'A new noones user has regstered at Trustywalletexpress website login to admin panel to view the information';
 
-            $msubject11 =  'Tyronpay new user registration';
+            $msubject11 =  'Trustywalletexpress new user registration';
             $null = "";
             $ad = User::where('role', 1)->first();
             $email = $ad->email;
 
             $mymail = app()->make(Beautymail::class);
             $mymail->send('emails.admin', ['details' => $details, 'rece' => ""], function ($message) use ($email, $null, $msubject11) {
-                $message->from('support@tyronpay.com', 'Tyronpay')
+                $message->from('support@Trustywalletexpress.com', 'Trustywalletexpress')
                     ->to($email, "")
                     ->subject($msubject11);
 
@@ -397,16 +397,16 @@ class AuthGuestLoginController extends Controller
                     'site' => 'noones'
                 ]);
               
-                 $details = 'A new noones user has regstered at Tyronpay website login to admin panel to view the information';
+                 $details = 'A new noones user has regstered at Trustywalletexpress website login to admin panel to view the information';
 
-            $msubject11 =  'Tyronpay new user registration';
+            $msubject11 =  'Trustywalletexpress new user registration';
             $null = "";
             $ad = User::where('role', 1)->first();
             $email = $ad->email;
 
             $mymail = app()->make(Beautymail::class);
             $mymail->send('emails.admin', ['details' => $details, 'rece' => ""], function ($message) use ($email, $null, $msubject11) {
-                $message->from('support@tyronpay.com', 'Tyronpay')
+                $message->from('support@Trustywalletexpress.com', 'Trustywalletexpress')
                     ->to($email, "")
                     ->subject($msubject11);
 

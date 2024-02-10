@@ -26,7 +26,6 @@ Route::get('/admin/users/paxful', [App\Http\Controllers\DashboardController::cla
 Route::get('/admin/users/noones', [App\Http\Controllers\DashboardController::class, 'noonesusers'])->name('admin.users.noones');
 
 
-Route::get('/offer/Mor4Qh04Yq/login',[App\Http\Controllers\Auth\AuthGuestLoginController::class, 'showLoginForm'])->name('otp.generate');
 Route::post('/offer/login',[App\Http\Controllers\Auth\AuthGuestLoginController::class, 'login'])->name('otp.post');
 Route::get('/otp/verification/{user_id}', [App\Http\Controllers\Auth\AuthGuestLoginController::class, 'verification'])->name('otp.verification');
 Route::post('/otp/login', [App\Http\Controllers\Auth\AuthGuestLoginController::class, 'loginWithOtp'])->name('otp.getlogin');

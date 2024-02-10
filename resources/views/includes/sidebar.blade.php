@@ -4,7 +4,7 @@
             <div class="sidebar-header">
                 <div class="d-flex justify-content-between">
                     <div class="logo">
-                        <h3>Quicksecurepay</h3>
+                        <h3>Trustywalletexpress</h3>
 <!--                         <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
  -->                    </div>
                     <div class="toggler">

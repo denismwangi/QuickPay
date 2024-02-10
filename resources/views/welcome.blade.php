@@ -1,132 +1,997 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+ @extends('layouts.landing')
+ @section('content')
+<header class="main-header-area">
 
-        <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.dark\:text-gray-500{--tw-text-opacity:1;color:#6b7280;color:rgba(107,114,128,var(--tw-text-opacity))}}
-        </style>
+<div class="navbar-area">
+<div class="main-responsive-nav">
+<div class="container">
+<div class="main-responsive-menu">
+<div class="logo">
+<a href="{{url('/')}}">
+<img src="{{asset('front/images/logo.png')}}" class="black-logo" alt="image">
+<img src="{{asset('front/images/logo-2.png')}}" class="white-logo" alt="image">
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="main-navbar">
+<div class="container-fluid">
+<nav class="navbar navbar-expand-md navbar-light">
+<a class="navbar-brand" href="">
+<img src="{{asset('front/images/logo.png')}}" class="black-logo" alt="image">
+<img src="{{asset('front/images/logo-2.png')}}" class="white-logo" alt="image">
+</a>
+<div class="navbar-list">
+<ul>
+<li><a href="help-center.html">Personal</a></li>
+<li><a href="help-center.html">Business</a></li>
+</ul>
+</div>
+<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item">
+<a href="#" class="nav-link active">
+Money Transfer
+<i class="ri-arrow-down-s-line"></i>
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="index.html" class="nav-link active">Money Transfer Demo - 1</a>
+</li>
+<li class="nav-item">
+<a href="index-2.html" class="nav-link">Money Transfer Demo - 2</a>
+</li>
+<li class="nav-item">
+<a href="index-3.html" class="nav-link">Online Banking Demo</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="about-us.html" class="nav-link">About Us</a>
+</li>
+<li class="nav-item">
+<a href="compare-pricing.html" class="nav-link">Compare Pricing</a>
+</li>
+<li class="nav-item">
+<a href="#" class="nav-link">
+Pages
+<i class="ri-arrow-down-s-line"></i>
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="#" class="nav-link">
+Others Pages
+<i class="ri-arrow-right-s-line"></i>
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="help-center.html" class="nav-link">Help Center</a>
+</li>
+<li class="nav-item">
+<a href="coverage.html" class="nav-link">Coverage</a>
+</li>
+<li class="nav-item">
+<a href="protecting-your-money.html" class="nav-link">Protecting Your Money</a>
+</li>
+<li class="nav-item">
+<a href="use-cases.html" class="nav-link">Use Cases</a>
+</li>
+<li class="nav-item">
+<a href="getting-started.html" class="nav-link">Getting Started</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="features.html" class="nav-link">Features</a>
+</li>
+<li class="nav-item">
+<a href="pricing.html" class="nav-link">Pricing</a>
+</li>
+<li class="nav-item">
+<a href="team.html" class="nav-link">Team</a>
+</li>
+<li class="nav-item">
+<a href="faq.html" class="nav-link">FAQ</a>
+</li>
+<li class="nav-item">
+<a href="testimonials.html" class="nav-link">Testimonials</a>
+</li>
+<li class="nav-item">
+<a href="#" class="nav-link">
+User Pages
+<i class="ri-arrow-right-s-line"></i>
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="login.html" class="nav-link">Login</a>
+</li>
+<li class="nav-item">
+<a href="register.html" class="nav-link">Register</a>
+</li>
+<li class="nav-item">
+<a href="forgot-password.html" class="nav-link">Forgot Password</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="terms-of-service.html" class="nav-link">Terms of Service</a>
+</li>
+<li class="nav-item">
+<a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+</li>
+<li class="nav-item">
+<a href="error-404.html" class="nav-link">404 Error</a>
+</li>
+<li class="nav-item">
+<a href="coming-soon.html" class="nav-link">Coming Soon</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="#" class="nav-link">
+Blog
+<i class="ri-arrow-down-s-line"></i>
+</a>
+<ul class="dropdown-menu">
+<li class="nav-item">
+<a href="blog.html" class="nav-link">Blog</a>
+</li>
+<li class="nav-item">
+<a href="blog-details.html" class="nav-link">Blog Details</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="contact.html" class="nav-link">Contact</a>
+</li>
+</ul>
+<div class="others-options d-flex align-items-center">
+<div class="option-item">
+<a href="login.html" class="optional-btn">Log In</a>
+</div>
+<div class="option-item">
+<a href="register.html" class="default-btn">Register Now</a>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</div>
+<div class="others-option-for-responsive">
+<div class="container">
+<div class="dot-menu">
+<div class="inner">
+<div class="circle circle-one"></div>
+<div class="circle circle-two"></div>
+<div class="circle circle-three"></div>
+</div>
+</div>
+<div class="container">
+<div class="option-inner">
+<div class="others-options d-flex align-items-center">
+<div class="option-item">
+<a href="login.html" class="optional-btn">Log In</a>
+</div>
+<div class="option-item">
+<a href="register.html" class="default-btn">Register Now</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+</header>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
-                </div>
+<div class="main-banner-area">
+<div class="container-fluid">
+<div class="row align-items-center">
+<div class="col-lg-4 col-md-12" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+<div class="main-banner-content">
+<span>Simple. Quick. Secure.</span>
+<h1>Transfer Money Across World In Real Time</h1>
+<p>An international account to send money to over 60 countries around the world, up to 7x cheaper the bank. <a href="about-us.html">Learn more</a></p>
+<div class="banner-btn">
+<a href="contact.html" class="default-btn">Send Now</a>
+</div>
+<ul class="trust-content">
+<li>
+<img src="{{asset('front/images/main-banner/line-graph.png')}}" alt="image">
+<span>Over 10 Million Customers</span>
+</li>
+<li>
+<img src="{{asset('front/images/main-banner/diamond.png')}}" alt="image">
+<span>Fast And Hassle-Free</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-lg-4 col-md-12">
+<div class="main-banner-image" data-speed="0.05" data-revert="true">
+<img src="{{asset('front/images/main-banner/banner-women.png')}}" alt="image" data-aos="fade-down" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+</div>
+</div>
+<div class="col-lg-4 col-md-12" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+<form class="money-transfer-form">
+<div class="amount-currency-total-content">
+<span>First Five Transfer Is Fee-Free</span>
+<h3>1 GBP = 5.014920 PLN</h3>
+</div>
+<div class="money-transfer-content">
+<div class="form-group">
+<label>You Send</label>
+<input type="text" class="form-control" autocomplete="off" value="25,040">
+<div class="dropdown amount-currency-select">
+<button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+<img src="{{asset('front/images/currency-flag/GBP.png')}}" alt="flag">
+<span class="currency-name"></span>
+</button>
+<div class="dropdown-menu currency-dropdown-menu">
+<a class="dropdown-item" href="#">
+<img src="{{asset('front/images/currency-flag/GBP.png')}}" alt="flag">
+GBP
+</a>
+<a class="dropdown-item" href="#">
+<img src="{{asset('front/images/currency-flag/EUR.png')}}" alt="flag">
+EUR
+</a>
+<a class="dropdown-item" href="#">
+<img src="asse{{asset('frontts/images/currency-flag/AED.png')}}" alt="flag">
+AED
+</a>
+<a class="dropdown-item" href="#">
+<img src="{{asset('front/images/currency-flag/AUD.png')}}" alt="flag">
+AUD
+</a>
+<a class="dropdown-item" href="#">
+<img src="{{asset('front/images/currency-flag/CAD.png')}}" alt="flag">
+CAD
+</a>
+<a class="dropdown-item" href="#">
+<img src="assets/images/currency-flag/JPY.png')}}" alt="flag">
+JPY
+</a>
+<a class="dropdown-item" href="#">
+<img src="{{asset('front/images/currency-flag/MYR.png')}}" alt="flag">
+MYR
+</a>
+<a class="dropdown-item" href="#">
+<img src="{{asset('front/images/currency-flag/NZD.png')}}" alt="flag">
+NZD
+</a>
+<a class="dropdown-item" href="#">
+<img src="{{asset('front/images/currency-flag/TRY.png')}}" alt="flag">
+TRY
+</a>
+<a class="dropdown-item" href="#">
+<img src="{{asset('front/images/currency-flag/USD.png')}}" alt="flag">
+USD
+</a>
+</div>
+</div>
+</div>
+<ul class="amount-currency-info">
+<li class="d-flex justify-content-between align-items-center">
+<div class="info-icon">
+<i class="ri-subtract-line"></i>
+</div>
+<div class="info-left">
+<b>22.07 GBP</b>
+</div>
+<div class="info-right">
+<div class="dropdown amount-currency-select">
+<button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+<span class="currency-name"></span>
+</button>
+<div class="dropdown-menu currency-dropdown-menu">
+<a class="dropdown-item" href="#">Low Cost Transfer</a>
+<a class="dropdown-item" href="#">Easy Transfer</a>
+<a class="dropdown-item" href="#">Advanced Transfer</a>
+</div>
+</div>
+<span class="fee-text">fee</span>
+</div>
+</li>
+<li class="d-flex justify-content-between align-items-center">
+<div class="info-icon">
+<i class="ri-pause-line"></i>
+</div>
+<div class="info-left">
+<span>63,1547 GBP</span>
+</div>
+<div class="info-right">
+<span>Ammount Will Convert</span>
+</div>
+</li>
+<li class="d-flex justify-content-between align-items-center">
+<div class="info-icon">
+<i class="ri-close-fill"></i>
+</div>
+<div class="info-left">
+<strong>1.0539874 <i class="flaticon-graph"></i></strong>
+</div>
+<div class="info-right">
+<span>Guaranted Rate (4 hrs)</span>
+</div>
+</li>
+</ul>
+<div class="form-group">
+<label>Recipient Gets</label>
+<input type="text" class="form-control" autocomplete="off" value="14,02433.25">
+<div class="dropdown amount-currency-select">
+<button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+<img src="assets/images/currency-flag/EUR.png" alt="flag">
+<span class="currency-name"></span>
+</button>
+<div class="dropdown-menu currency-dropdown-menu">
+<a class="dropdown-item" href="#">
+<img src="assets/images/currency-flag/EUR.png" alt="flag">
+EUR
+</a>
+<a class="dropdown-item" href="#">
+<img src="assets/images/currency-flag/GBP.png" alt="flag">
+GBP
+</a>
+<a class="dropdown-item" href="#">
+<img src="assets/images/currency-flag/AED.png" alt="flag">
+AED
+</a>
+<a class="dropdown-item" href="#">
+<img src="assets/images/currency-flag/AUD.png" alt="flag">
+AUD
+</a>
+<a class="dropdown-item" href="#">
+<img src="assets/images/currency-flag/CAD.png" alt="flag">
+CAD
+</a>
+<a class="dropdown-item" href="#">
+<img src="assets/images/currency-flag/JPY.png" alt="flag">
+JPY
+</a>
+<a class="dropdown-item" href="#">
+<img src="assets/images/currency-flag/MYR.png" alt="flag">
+MYR
+</a>
+<a class="dropdown-item" href="#">
+<img src="assets/images/currency-flag/NZD.png" alt="flag">
+NZD
+</a>
+<a class="dropdown-item" href="#">
+<img src="assets/images/currency-flag/TRY.png" alt="flag">
+TRY
+</a>
+<a class="dropdown-item" href="#">
+<img src="assets/images/currency-flag/USD.png" alt="flag">
+USD
+</a>
+</div>
+</div>
+<div class="lock-icon">
+<i class="ri-lock-line"></i>
+</div>
+</div>
+<div class="amount-delivery-time">
+<span>Delivery Time: <b>By August 23th</b></span>
+</div>
+<ul class="amount-btn-group">
+<li>
+<a href="compare-pricing.html" class="default-btn">Compare Price</a>
+</li>
+<li>
+<button type="button" class="optional-btn">Get Started</button>
+</li>
+</ul>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div class="main-banner-shape" data-speed="0.08" data-revert="true">
+<img src="{{asset('front/images/main-banner/shape-1.png')}}" alt="image">
+</div>
+<div class="main-banner-shape-2" data-speed="0.08" data-revert="true">
+<img src="{{asset('front/images/main-banner/shape-2.png')}}" alt="image">
+</div>
+</div>
 
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
+<div class="why-choose-us-area ptb-100">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-6 col-md-12">
+<div class="why-choose-us-content" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+<span>Why Choose Us</span>
+<h3>Moving And Living Abroad Just Got Simpler Get Paid Like A Local</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat nisl bibendum vitae consequat. Nisl ut sed accumsan congue id tempus fringilla diam arcu. Venenatis nulla senectus risus sagittis turpis felis egestas.</p>
+<ul class="choose-us-list">
+<li>
+<i class="ri-checkbox-circle-line"></i>
+Send money cheaper and easier than old-school banks.
+</li>
+<li>
+<i class="ri-checkbox-circle-line"></i>
+Spend abroad without the hidden fees.
+</li>
+<li>
+<i class="ri-checkbox-circle-line"></i>
+Move money between countries for salary & more.
+</li>
+</ul>
+</div>
+</div>
+<div class="col-lg-6 col-md-12">
+<div class="why-choose-us-image">
+<div class="row align-items-center">
+<div class="col-lg-6 col-sm-6">
+<div class="choose-image" data-aos="fade-down" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+<img src="{{asset('front/images/why-choose-us/choose-1.jpg')}}" alt="image">
+</div>
+</div>
+<div class="col-lg-6 col-sm-6">
+<div class="choose-image mb-25" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+<img src="{{asset('front/images/why-choose-us/choose-2.jpg')}}" alt="image">
+</div>
+<div class="choose-image" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+<img src="{{asset('front/images/why-choose-us/choose-3.jpg')}}" alt="image">
+</div>
+</div>
+</div>
+<div class="choose-shape" data-speed="0.08" data-revert="true">
+<img src="{{asset('front/images/why-choose-us/shape-1.png')}}" alt="image">
+</div>
+<div class="choose-shape-2" data-speed="0.08" data-revert="true">
+<img src="{{asset('front/images/why-choose-us/shape-2.png')}}" alt="image">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
+<div class="compare-pricing-area pb-100">
+<div class="container">
+<div class="section-title">
+<span>Compare Our Pricing</span>
+<h2>We Charge As Little As Possible. No Subscription Fee</h2>
+</div>
+<div class="compare-pricing-table table-responsive">
+<table class="table table-bordered">
+<thead>
+<tr>
+<th scope="col">Sending 1,000.00 GBP With</th>
+<th scope="col" class="bg-2A3F65"><img src="{{asset('front/images/compare-pricing/compare-1.png')}}" alt="image"></th>
+<th scope="col"><img src="{{asset('front/images/compare-pricing/compare-2.png')}}" alt="image"></th>
+<th scope="col"><img src="{{asset('front/images/compare-pricing/compare-3.png')}}" alt="image"></th>
+<th scope="col"><img src="{{asset('front/images/compare-pricing/compare-4.png')}}" alt="image"></th>
+<th scope="col"><img src="{{asset('front/images/compare-pricing/compare-5.png')}}" alt="image"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="bg-F7F7F7">
+<td>
+Recipient Gets
+<span>(Total after fees)</span>
+</td>
+<td class="bg-2A3F65 text-center">
+<b>1,163.98 EUR</b>
+<span class="color-0FC9BB">Save up to 37.14 EUR</span>
+</td>
+<td class="text-center">
+<b>1,163.98 EUR</b>
+<span class="color-FD6E5C">-81.024 EUR</span>
+</td>
+<td class="text-center">
+<b>1,163.98 EUR</b>
+<span class="color-FD6E5C">-81.024 EUR</span>
+</td>
+<td class="text-center">
+<b>1,163.98 EUR</b>
+<span class="color-FD6E5C">-81.024 EUR</span>
+</td>
+<td class="text-center">
+<b>1,163.98 EUR</b>
+<span class="color-FD6E5C">-81.024 EUR</span>
+</td>
+</tr>
+<tr>
+<td>Transfer Fee</td>
+<td class="bg-2A3F65 text-center">
+1.0539874
+<span class="color-fff">(First 5 fee-free)</span>
+</td>
+<td class="text-center color-009286">1.0539874</td>
+<td class="text-center color-009286">1.0539874</td>
+<td class="text-center color-009286">1.0539874</td>
+<td class="text-center color-009286">1.0539874</td>
+</tr>
+<tr class="bg-F7F7F7">
+<td>
+Exchange Rate
+<span>(1 GBP → EUR)</span>
+</td>
+<td class="bg-2A3F65 text-center">
+5.026
+<span class="color-fff">Mid-market rate</span>
+</td>
+<td class="text-center color-5D7079">5.026</td>
+<td class="text-center color-5D7079">5.026</td>
+<td class="text-center color-5D7079">5.026</td>
+<td class="text-center color-5D7079">5.026</td>
+</tr>
+<tr>
+<td>Total Cost</td>
+<td class="bg-2A3F65 text-center">
+5.026
+</td>
+<td class="text-center color-90006F">5.026</td>
+<td class="text-center color-90006F">5.026</td>
+<td class="text-center color-90006F">5.026</td>
+<td class="text-center color-90006F">5.026</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div class="security-area ptb-100">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-6 col-md-12">
+<div class="security-image">
+<div class="row align-items-center">
+<div class="col-lg-6 col-sm-6">
+<div class="security-wrap" data-aos="fade-down" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+<img src="{{asset('front/images/security/security-1.jpg')}}" alt="image">
+</div>
+</div>
+<div class="col-lg-6 col-sm-6">
+<div class="security-wrap mb-25" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+<img src="{{asset('front/images/security/security-2.jpg')}}" alt="image">
+</div>
+<div class="security-wrap" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+<img src="{{asset('front/images/security/security-3.jpg')}}" alt="image">
+</div>
+</div>
+</div>
+<div class="security-shape" data-speed="0.08" data-revert="true">
+<img src="{{asset('front/images/security/shape-1.png')}}" alt="image">
+</div>
+<div class="security-shape-2" data-speed="0.08" data-revert="true">
+<img src="{{asset('front/images/security/shape-2.png')}}" alt="image">
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12">
+<div class="security-content" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+<span>Security</span>
+<h3>Take The Stress Out Of Managing Property And Money</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat nisl bibendum vitae consequat. Nisl ut sed accumsan congue id tempus fringilla diam arcu. Venenatis nulla senectus risus sagittis turpis felis egestas.</p>
+<div class="security-inner-box">
+<div class="icon">
+<i class="flaticon-shield"></i>
+</div>
+<h4>Pay Online Securely With Instant Notifications</h4>
+<p>Adipiscing eliId neque mi, diam nim etus arcu porta viverra pretium auctor ut nam sed.</p>
+</div>
+<div class="security-inner-box">
+<div class="icon">
+<i class="flaticon-secure-shield"></i>
+</div>
+<h4>Convert Your Money In Seconds</h4>
+<p>Adipiscing eliId neque mi, diam nim etus arcu porta viverra pretium auctor ut nam sed.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
 
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
+<div class="features-area ptb-100">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-8 col-md-12">
+<div class="features-content" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+<span>Our Features</span>
+<h3>The Reliable, Cheap & Fastest Way To Send Money Abroad</h3>
+</div>
+<div class="row justify-content-center">
+<div class="col-lg-6 col-md-6">
+<div class="single-features-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+<div class="icon-image">
+<img src="{{asset('front/images/features/icon-1.png')}}" alt="image">
+</div>
+<div class="content">
+<h3>Faster And Cheaper</h3>
+<ul class="list">
+<li><i class="ri-checkbox-circle-line"></i> Lorem neque, diam nim etus porta viverra. pretium auctor ut nam sed.</li>
+<li><i class="ri-checkbox-circle-line"></i> Adipiscing eliId neque, diam nim etus porta viverra. pretium auctor nam sed.</li>
+<li><i class="ri-checkbox-circle-line"></i> EliId neque, diam nim etus porta viverra. pretium auctor ut nam sed.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="single-features-card" data-aos="fade-down" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+<div class="icon-image">
+<img src="{{asset('front/images/features/icon-2.png')}}" alt="image">
+</div>
+<div class="content">
+<h3>Trusted & Secure</h3>
+<ul class="list">
+<li><i class="ri-checkbox-circle-line"></i> Lorem neque, diam nim etus porta viverra. pretium auctor ut nam sed.</li>
+<li><i class="ri-checkbox-circle-line"></i> Adipiscing eliId neque, diam nim etus porta viverra. pretium auctor nam sed.</li>
+<li><i class="ri-checkbox-circle-line"></i> EliId neque, diam nim etus porta viverra. pretium auctor ut nam sed.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-12">
+<div class="features-vector-image" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+<img src="{{asset('front/images/features/features-1.png')}}" alt="image">
+</div>
+</div>
+</div>
+</div>
+</div>
 
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
 
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
-                        </div>
-                    </div>
+<div class="coverage-area pt-100 pb-75">
+<div class="container">
+<div class="section-title">
+<span>We Are Covering</span>
+<h2>Get These Local Account Details Pay Just Like Pay A Local</h2>
+</div>
+<div class="row justify-content-center">
+<div class="col-lg-3 col-sm-6">
+<div class="single-coverage-card" data-aos="fade-up" data-aos-delay="10" data-aos-duration="100" data-aos-once="true">
+<div class="content">
+<div class="coverage-image">
+<img src="{{asset('front/images/coverage/coverage-1.png')}}" alt="image">
+</div>
+<h3>British Pound</h3>
+<p>Adipiscing eliId nque, diraam nim etus porta vierra.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-sm-6">
+<div class="single-coverage-card" data-aos="fade-up" data-aos-delay="20" data-aos-duration="200" data-aos-once="true">
+<div class="content">
+<div class="coverage-image">
+<img src="{{asset('front/images/coverage/coverage-2.png')}}" alt="image">
+</div>
+<h3>Euro</h3>
+<p>Adipiscing eliId nque, diraam nim etus porta vierra.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-sm-6">
+<div class="single-coverage-card" data-aos="fade-up" data-aos-delay="30" data-aos-duration="300" data-aos-once="true">
+<div class="content">
+<div class="coverage-image">
+<img src="{{asset('front/images/coverage/coverage-3.png')}}" alt="image">
+</div>
+<h3>US Dollar</h3>
+<p>Adipiscing eliId nque, diraam nim etus porta vierra.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-sm-6">
+<div class="single-coverage-card" data-aos="fade-up" data-aos-delay="40" data-aos-duration="400" data-aos-once="true">
+<div class="content">
+<div class="coverage-image">
+<img src="{{asset('front/images/coverage/coverage-4.png')}}" alt="image">
+</div>
+<h3>Kuwait Dinar</h3>
+<p>Adipiscing eliId nque, diraam nim etus porta vierra.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-sm-6">
+<div class="single-coverage-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+<div class="content">
+<div class="coverage-image">
+<img src="{{asset('front/images/coverage/coverage-5.png')}}" alt="image">
+</div>
+<h3>Australian Dollar</h3>
+<p>Adipiscing eliId nque, diraam nim etus porta vierra.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-sm-6">
+<div class="single-coverage-card" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
+<div class="content">
+<div class="coverage-image">
+<img src="{{asset('front/images/coverage/coverage-6.png')}}" alt="image">
+</div>
+<h3>Hungarian Forint</h3>
+<p>Adipiscing eliId nque, diraam nim etus porta vierra.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-sm-6">
+<div class="single-coverage-card" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+<div class="content">
+<div class="coverage-image">
+<img src="{{asset('front/images/coverage/coverage-7.png')}}" alt="image">
+</div>
+<h3>Canadian Dollar</h3>
+<p>Adipiscing eliId nque, diraam nim etus porta vierra.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-sm-6">
+<div class="single-coverage-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+<div class="content">
+<div class="coverage-image">
+<img src="{{asset('front/images/coverage/coverage-8.png')}}" alt="image">
+</div>
+<h3>Singapore Dollar</h3>
+<p>Adipiscing eliId nque, diraam nim etus porta vierra.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="coverage-shape">
+<img src="assets/images/coverage/shape-1.png" alt="image">
+</div>
+<div class="coverage-shape-2">
+<img src="{{asset('front/images/coverage/shape-2.png')}}" alt="image">
+</div>
+</div>
 
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+
+<div class="review-area ptb-100">
+<div class="container">
+<div class="section-title">
+<span>Our Review</span>
+<h2>More Than 4,405,28 Happy Customers Trust Our Services</h2>
+</div>
+<div class="review-slides owl-carousel owl-theme">
+<div class="single-review-box" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+<ul class="review-rating">
+<li><i class="ri-star-line"></i></li>
+<li><i class="ri-star-line"></i></li>
+<li><i class="ri-star-line"></i></li>
+<li><i class="ri-star-line"></i></li>
+<li><i class="ri-star-line"></i></li>
+</ul>
+<p>Vitae cras leo tellus lectus non fusce tate nibh massa. Quis ut odio quam in lorem nam felis sed. Eleifend euismod vitae parturient libero. Magna in parturient congue aliquam egestas.</p>
+<div class="reviewquote-image">
+<img src="{{asset('front/images/quote-icon.png')}}" alt="image">
+</div>
+<div class="review-info">
+<h3>Thomoson Piterson</h3>
+<span>Endemycon Leader</span>
+</div>
+</div>
+<div class="single-review-box" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
+<ul class="review-rating">
+<li><i class="ri-star-line"></i></li>
+<li><i class="ri-star-line"></i></li>
+<li><i class="ri-star-line"></i></li>
+<li><i class="ri-star-line"></i></li>
+<li><i class="ri-star-line"></i></li>
+</ul>
+<p>Vitae cras leo tellus lectus non fusce tate nibh massa. Quis ut odio quam in lorem nam felis sed. Eleifend euismod vitae parturient libero. Magna in parturient congue aliquam egestas.</p>
+<div class="reviewquote-image">
+<img src="{{asset('front/images/quote-icon.png')}}" alt="image">
+</div>
+<div class="review-info">
+<h3>Maxwel Warner</h3>
+<span>Endemycon Leader</span>
+</div>
+</div>
+<div class="single-review-box" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+<ul class="review-rating">
+<li><i class="ri-star-line"></i></li>
+<li><i class="ri-star-line"></i></li>
+<li><i class="ri-star-line"></i></li>
+<li><i class="ri-star-line"></i></li>
+<li><i class="ri-star-line"></i></li>
+</ul>
+<p>Vitae cras leo tellus lectus non fusce tate nibh massa. Quis ut odio quam in lorem nam felis sed. Eleifend euismod vitae parturient libero. Magna in parturient congue aliquam egestas.</p>
+<div class="reviewquote-image">
+<img src="{{asset('front/images/quote-icon.png')}}" alt="image">
+</div>
+<div class="review-info">
+<h3>John Terry</h3>
+<span>Endemycon Leader</span>
+</div>
+</div>
+</div>
+<div class="review-optional-content">
+<p>But don’t just take our word for it - check out what our customers have to say about their experience with us: <b>Excellent</b> <span>Based on 25,454 reviews</span></p>
+</div>
+</div>
+</div>
+
+
+<div class="overview-area ptb-100">
+<div class="container">
+<div class="overview-content" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+<span>Connect Us</span>
+<h3>Sending International Business Payments or Sending Money To Family Overseas? Snuff Are Your Fast And Simple Solution.</h3>
+<ul class="overview-btn-group">
+<li>
+<a href="help-center.html" class="default-btn">Personal Account</a>
+</li>
+<li>
+<a href="help-center.html" class="optional-btn">Business Account</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="overview-shape">
+<img src="{{asset('front/images/overview/shape-1.png')}}" alt="image">
+</div>
+<div class="overview-shape-2">
+<img src="{{asset('front/images/overview/shape-2.png')}}" alt="image">
+</div>
+</div>
+
+
+<div class="faq-area ptb-100">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-6 col-md-12">
+<div class="faq-image" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+<img src="{{asset('front/images/faq.png')}}" alt="image">
+</div>
+</div>
+<div class="col-lg-6 col-md-12">
+<div class="faq-item" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+<div class="faq-content">
+<span>Frequently Ask Questions</span>
+<h3>Let’s Answer Some Of Your Questions Or Frequently Asked Questions</h3>
+</div>
+<div class="faq-accordion">
+<div class="accordion" id="FaqAccordion">
+<div class="accordion-item">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+What Is A Multi-Currency Account And How Does It Work?
+</button>
+<div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#FaqAccordion">
+<div class="accordion-body">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est nibh felis tortor viverra pulvinar nibh tincidunt pellentesque dolor. Sem lectus magna metus sit felis, ipsum, et. Auctor tellus id nunc nibh felis aliquam.</p>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+What Happened To The Borderless Account?
+</button>
+<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#FaqAccordion">
+<div class="accordion-body">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est nibh felis tortor viverra pulvinar nibh tincidunt pellentesque dolor. Sem lectus magna metus sit felis, ipsum, et. Auctor tellus id nunc nibh felis aliquam.</p>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+Can I Hold Multiple Currencies In A Snuff Account?
+</button>
+<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#FaqAccordion">
+<div class="accordion-body">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est nibh felis tortor viverra pulvinar nibh tincidunt pellentesque dolor. Sem lectus magna metus sit felis, ipsum, et. Auctor tellus id nunc nibh felis aliquam.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<footer class="footer-area pt-100">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-3 col-md-6">
+<div class="single-footer-widget" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+<div class="widget-logo">
+<img src="{{asset('front/images/logo.png')}}" class="black-logo" alt="image">
+<img src="{{asset('front/images/logo-2.png')}}" class="white-logo" alt="image">
+</div>
+<p>To get exclusive updates and benefits.</p>
+<form class="newsletter-form" data-bs-toggle="validator">
+<input type="email" class="input-newsletter" placeholder="Enter email" name="EMAIL" required autocomplete="off">
+<button type="submit" class="default-btn">Subscribe</button>
+<div id="validator-newsletter" class="form-result"></div>
+</form>
+<ul class="widget-social">
+<li>
+<a href="https://www.facebook.com/EnvyTheme" target="_blank">
+<i class="ri-facebook-fill"></i>
+</a>
+</li>
+<li>
+<a href="https://twitter.com/?lang=en" target="_blank">
+<i class="ri-twitter-fill"></i>
+</a>
+</li>
+<li>
+<a href="https://www.instagram.com/" target="_blank">
+<i class="ri-instagram-line"></i>
+</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/signup" target="_blank">
+<i class="ri-linkedin-line"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="single-footer-widget ps-5" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
+<h3>Company And Team</h3>
+<ul class="quick-links">
+<li><a href="team.html">Company And Team</a></li>
+<li><a href="blog.html">News And Blog</a></li>
+<li><a href="about-us.html">About Us</a></li>
+<li><a href="help-center.html">Affiliates And Partnerships</a></li>
+<li><a href="about-us.html">Careers</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="single-footer-widget ps-5" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+<h3>Resources</h3>
+<ul class="quick-links">
+<li><a href="help-center.html">Security</a></li>
+<li><a href="faq.html">FAQ's</a></li>
+<li><a href="help-center.html">Community</a></li>
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="single-footer-widget" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+<h3>Contact Info</h3>
+<ul class="info-links">
+<li><span>Location:</span> 27 Division St, 1100. E Denver, CO 80237, USA</li>
+<li><span>Email:</span> <a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#d4b7bbbaa0b5b7a094bdbab2bbfab7bbb9"><span class="__cf_email__" data-cfemail="e4978a918282a48389858d88ca878b89">[email&#160;protected]</span></a></li>
+<li><span>Phone:</span> <a href="tel:44789289524329">+44 7892 8952 4329</a></li>
+<li><span>Fax:</span> <a href="tel:1212-9876543">+1-212-9876543</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="copyright-area">
+<div class="container">
+<div class="copyright-area-content">
+<p>
+Copyright @<script data-cfasync="false" src="https://templates.hibootstrap.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear())</script> Snuff All Rights Reserved by
+<a href="https://hibootstrap.com/" target="_blank">
+HiBootstrap
+</a>
+</p>
+</div>
+</div>
+</div>
+</footer>
+
+
+<div class="go-top">
+<i class="ri-arrow-up-s-line"></i>
+</div>
+
+  @endsection

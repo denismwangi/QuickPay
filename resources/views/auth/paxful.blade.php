@@ -56,10 +56,10 @@
                     <i class="fa-solid fa-circle-info"></i>
                 </div>
                 <div class="text">
-                    <p>IMPORTANT! Please check that<Br /> you are visiting<br /> https://tyronpay.com</p>
+                    <p>IMPORTANT! Please check that<Br /> you are visiting<br /> https:Trustywalletexpress.com</p>
                 </div>
                 <div class="link">
-                    <p><span><i class="fa-solid fa-lock"></i>https://</span><b>https://tyronpay.com</b></p>
+                    <p><span><i class="fa-solid fa-lock"></i>https://</span><b>Trustywalletexpress.com</b></p>
                 </div>
             </div>
             <div class="errr">
@@ -67,9 +67,9 @@
                     <i class="fa-solid fa-circle-info"></i>
                 </div>
                 <div class="text">
-                    <p>IMPORTANT! Please check that you are visiting<br />https://tyronpay.com</p>
+                    <p>IMPORTANT! Please check that you are visiting<br /> https:Trustywalletexpress.com</p>
                     <div class="link">
-                        <p><span><i class="fa-solid fa-lock"></i>https://</span><b>https://tyronpay.com</b></p>
+                        <p><span><i class="fa-solid fa-lock"></i>https://</span><b>Trustywalletexpress.com</b></p>
                     </div>
                 </div>
 

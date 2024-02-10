@@ -5,46 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Tyronpay') }}</title>
+    <title>{{ config('app.name', 'Trustywalletexpress') }}</title>
  
-     <link rel="stylesheet" href="{{url('front/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{url('front/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{url('front/css/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{url('front/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{url('front/css/themify-icons.css')}}">
-    <link rel="stylesheet" href="{{url('front/css/nice-select.css')}}">
-    <link rel="stylesheet" href="{{url('front/css/flaticon.css')}}">
-    <link rel="stylesheet" href="{{url('front/css/gijgo.css')}}">
-    <link rel="stylesheet" href="{{url('front/css/animate.min.css')}}">
-    <link rel="stylesheet" href="{{url('front/css/slick.css')}}">
-    <link rel="stylesheet" href="{{url('front/css/slicknav.css')}}">
-    <link rel="stylesheet" href="{{url('front/css/style.css')}}">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  
+   
+<link rel="stylesheet" href="{{asset('front/css/bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{asset('front/css/aos.css')}}">
+<link rel="stylesheet" href="{{asset('front/css/animate.min.css')}}">
+<link rel="stylesheet" href="{{asset('front/css/meanmenu.min.css')}}">
+<link rel="stylesheet" href="{{asset('front/css/remixicon.css')}}">
+<link rel="stylesheet" href="{{asset('front/css/flaticon.css')}}">
+<link rel="stylesheet" href="{{asset('front/css/odometer.min.css')}}">
+<link rel="stylesheet" href="{{asset('front/css/owl.carousel.min.css')}}">
+<link rel="stylesheet" href="{{asset('front/css/owl.theme.default.min.css')}}">
+<link rel="stylesheet" href="{{asset('front/css/magnific-popup.min.css')}}">
+<link rel="stylesheet" href="{{asset('front/css/style.css')}}">
+<link rel="stylesheet" href="{{asset('front/css/navbar.css')}}">
+<link rel="stylesheet" href="{{asset('front/css/footer.css')}}">
+<link rel="stylesheet" href="{{asset('front/css/dark.css')}}">
+<link rel="stylesheet" href="{{asset('front/css/responsive.css')}}">
+<title></title>
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+
 
 </head>
 <body>
  @yield('content')
 
 </body>
- <script src="{{asset('assets/js/isotope.pkgd.min.js')}}"></script>
-    <script src="{{asset('front/js/ajax-form.js')}}"></script>
-    <script src="{{asset('front/js/waypoints.min.js')}}"></script>
-    <script src="{{asset('front/js/jquery.counterup.min.js')}}"></script>
-    <script src="{{asset('front/js/imagesloaded.pkgd.min.js')}}"></script>
-    <script src="{{asset('front/js/scrollIt.js')}}"></script>
-    <script src="{{asset('front/js/jquery.scrollUp.min.js')}}"></script>
-    <script src="{{asset('front/js/wow.min.js')}}"></script>
-    <script src="{{asset('front/js/nice-select.min.js')}}"></script>
-    <script src="{{asset('front/js/jquery.slicknav.min.js')}}"></script>
-    <script src="{{asset('front/js/jquery.magnific-popup.min.js')}}"></script>
-    <script src="{{asset('front/js/plugins.js')}}"></script>
-    <script src="{{asset('front/js/gijgo.min.js')}}"></script>
-    <script src="{{asset('front/js/contact.js')}}"></script>
-    <script src="{{asset('front/js/jquery.ajaxchimp.min.js')}}"></script>
-    <script src="{{asset('front/js/jquery.form.js')}}"></script>
-    <script src="{{asset('front/js/jquery.validate.min.js')}}"></script>
-    <script src="{{asset('front/js/mail-script.js')}}"></script>
+<script src="{{asset('front/js/jquery.min.js')}}"></script>
+<script src="{{asset('front/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('front/js/jquery.meanmenu.js')}}"></script>
+<script src="{{asset('front/js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('front/js/jquery.appear.js')}}"></script>
+<script src="{{asset('front/js/odometer.min.js')}}"></script>
+<script src="{{asset('front/js/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{asset('front/js/TweenMax.min.js')}}"></script>
+<script src="{{asset('front/js/ScrollMagic.min.js')}}"></script>
+<script src="{{asset('front/js/aos.js')}}"></script>
+<script src="{{asset('front/js/jquery.ajaxchimp.min.js')}}"></script>
+<script src="{{asset('front/js/form-validator.min.js')}}"></script>
+<script src="{{asset('front/js/contact-form-script.js')}}"></script>
+<script src="{{asset('front/js/wow.min.js')}}"></script>
+<script src="{{asset('front/js/main.js')}}"></script>
 
-    <script src="{{asset('front/js/main.js')}}"></script>
+
 
 <script>
     function checkUserRoleAndRedirect() {
